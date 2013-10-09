@@ -10,6 +10,7 @@ namespace Calc
     {
         #region Fields
 
+        private string[] _operations = new string[] {"/","*","+","-"};
         private int _X;
         private int _Y;
         private string _operation;
@@ -17,11 +18,26 @@ namespace Calc
         #endregion
 
         #region Methods
-        
-        public void Initialaze()
+
+        public Calculator()
         {
             Console.WriteLine("Calculator");
-            this.ChooseOperation();
+        }
+
+        private void ChooseOperation()
+        {
+            bool _rightOperation = false;
+            Console.WriteLine("Please choose operation:");
+            Operation = Console.ReadLine();
+            foreach (string _str in _operations)
+            {
+                if (Operation == _str) { _rightOperation = true; break; }
+            }
+            if (!_rightOperation)
+            {
+                Console.WriteLine("Wrong operation!!!");
+                this.ChooseOperation();
+            }
         }
 
         private void ChooseValues()
@@ -31,37 +47,39 @@ namespace Calc
 
             Console.WriteLine("Please enter Y:");
             Y = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Result:");
         }
 
-        private void ChooseOperation()
+        public void Calculating()
         {
-            Console.WriteLine("Please choose operation:");
-            Operation = Console.ReadLine();
+            this.ChooseOperation();
+            this.ChooseValues();
+            Console.WriteLine("Result:");
+            Console.WriteLine(Calcutate());
+            Console.ReadLine();
+        }
+        
+        private string Calcutate()
+        {
+            Int32 _result;
             switch (Operation)
             {
                 case "/":
-                    this.ChooseValues();
-                    Console.WriteLine((X / Y).ToString());
+                    _result = X / Y;
                     break;
                 case "*":
-                    this.ChooseValues();
-                    Console.WriteLine((X * Y).ToString());
+                    _result = X * Y;
                     break;
                 case "+":
-                    this.ChooseValues();
-                    Console.WriteLine((X + Y).ToString());
+                    _result = X + Y;
                     break;
                 case "-":
-                    this.ChooseValues();
-                    Console.WriteLine((X - Y).ToString());
+                    _result = X - Y;
                     break;
                 default:
-                    Console.WriteLine("Wrong operation.");
+                    _result = 0;
                     break;
             }
-            Console.ReadLine();
+            return _result.ToString();
         }
 
         #endregion

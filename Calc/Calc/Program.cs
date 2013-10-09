@@ -14,7 +14,7 @@ namespace Calc
         static void Main(string[] args)
         {
             Calculator Calc = new Calculator();
-            Calc.Initialaze();
+            Calc.Calculating();
         }
         
     }

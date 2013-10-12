@@ -12,6 +12,8 @@ namespace Calc
         {
             Calculator Calc = new Calculator();
             Calc.Calculating();
+
+
         }
     }
 }

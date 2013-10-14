@@ -10,8 +10,10 @@ namespace hw2
     {
         static void Main(string[] args)
         {
-            Item3 I3 = new Item3();
-            I3.Start();
+             Item1.Start();
+             //Item2.Start();
+             //Item3.Start();
+             //Item4.Start();
         }
     }
 }

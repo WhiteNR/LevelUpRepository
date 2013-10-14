@@ -8,27 +8,32 @@ namespace hw2
 {
     class Item3
     {
-        public void Start()
+        public static void Start()
         {
             int A, B;
-            Console.WriteLine("A<B");
+            Console.WriteLine("A < B");
             Console.WriteLine("Enter A:");
             A = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter B:");
             B = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = A; i <= B; i++)
+            if (A < B)
             {
-                for (int j = 0; j < i; j++)
+                for (int i = A; i <= B; i++)
                 {
-                    Console.Write(i);
-                    Console.Write(" ");
+                    for (int j = 0; j < i; j++)
+                    {
+                        Console.Write(i);
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
+            }
+            else
+            {
+                Console.WriteLine("Error. A >= B.");
             }
             Console.ReadLine();
-
         }
     }
 }

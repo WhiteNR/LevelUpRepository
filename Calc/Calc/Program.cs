@@ -8,14 +8,12 @@ namespace Calc
 {
     class Program
     {
-       
-       
-
         static void Main(string[] args)
         {
             Calculator Calc = new Calculator();
             Calc.Calculating();
+
+
         }
-        
     }
 }

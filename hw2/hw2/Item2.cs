@@ -16,7 +16,7 @@ namespace hw2
             Console.WriteLine("Please enter P:");
             try
             {
-                P = Convert.ToSingle(Console.ReadLine());
+                P = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine();
                 while (amount < 1100)
                 {

@@ -10,20 +10,23 @@ namespace hw2
     {
         public static void Start()
         {
-            int N;
+            int N, B = 0;
             Console.WriteLine("N>0");
             Console.WriteLine("Please enter N:");
             try
             {
                 N = Convert.ToInt32(Console.ReadLine());
-                for (int i = N.ToString().Length - 1; i >= 0; i--)
+                while(N > 0)
                 {
-                    Console.Write(N.ToString()[i]);
+                    B = B * 10;
+                    B += (N % 10);
+                    N = N / 10;
                 }
+                Console.WriteLine(B);
             }
             catch 
             {
-                Console.WriteLine("Error. N > 0.");
+                Console.WriteLine("Error!");
             }
             Console.ReadLine();
         }

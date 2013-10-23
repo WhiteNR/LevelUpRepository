@@ -37,7 +37,7 @@ namespace hw3
                         MakeLine();
                         break;
                     case 5:
-                        SumEvens();
+                        SumOdds();
                         break;
                     case 6:
                         Factorial();
@@ -138,7 +138,7 @@ namespace hw3
             Console.Clear();
             for (int i = 0; i < _length; i++)
             {
-                if (direction == 0)
+                if (direction == 1)
                 {
                     Console.WriteLine(symbol);
                 }
@@ -151,7 +151,7 @@ namespace hw3
             Console.ReadLine();
         }
 
-        public static void SumEvens()
+        public static void SumOdds()
         {
             int A = 0, B = 0, result = 0, i = 0;
             Console.WriteLine("SUM EVENS.");
@@ -169,7 +169,7 @@ namespace hw3
                 i++;
             }
             Console.Clear();
-            Console.WriteLine("The sum of evens in range from {0} to {1} = {2}", A, B, result);
+            Console.WriteLine("The sum of odds in range from {0} to {1} = {2}", A, B, result);
             Console.ReadLine();
         }
 

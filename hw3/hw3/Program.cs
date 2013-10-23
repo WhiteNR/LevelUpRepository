@@ -28,7 +28,7 @@ namespace hw3
                         Even();
                         break;
                     case 2:
-                        Numbers();
+                        Numbers_v2();
                         break;
                     case 3:
                         InchConvert();
@@ -81,7 +81,7 @@ namespace hw3
             catch
             {
                 Console.WriteLine("Error.");
-                Numbers();
+                return;
             }
             _numbers = a.ToString().Replace(",", "");
             for (int i = 0; i < _numbers.Length; i++)
@@ -90,6 +90,43 @@ namespace hw3
                 count++;
             }
             Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, count);
+            Console.ReadLine();
+        }
+
+        public static void Numbers_v2()
+        {
+            int sum = 0, orig_count = 0, unit = 0, count = 0,div = 0;;
+            double natural = 0;
+            string number = "";
+            Console.WriteLine("NUMBERS.");
+            Console.WriteLine("Please enter the number a < 100:");
+            try
+            {
+                number = Console.ReadLine();
+                natural = Double.Parse(number);
+                orig_count = number.Replace(",", "").Length;
+                count = orig_count;
+            }
+            catch
+            {
+                Console.WriteLine("Error.");
+                return;
+            }
+            unit = (int)natural;
+            div = (int)((natural - unit) * Math.Pow(10, count - unit.ToString().Length));
+            while (unit != 0)
+            {
+                sum += (unit % 10);
+                unit = unit / 10;
+                count--;
+            }
+            while (div != 0)
+            {
+                sum += (div % 10);
+                div = div / 10;
+                count--;
+            }
+            Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, orig_count);
             Console.ReadLine();
         }
 

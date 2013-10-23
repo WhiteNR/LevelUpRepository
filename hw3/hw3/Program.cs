@@ -21,30 +21,25 @@ namespace hw3
                 Console.WriteLine("6. FACTORIAL");
                 Console.WriteLine("7. EXIT");
                 command = Int16.Parse(Console.ReadLine());
+                Console.Clear();
                 switch (command)
                 {
                     case 1:
-                        Console.Clear();
                         Even();
                         break;
                     case 2:
-                        Console.Clear();
                         Numbers();
                         break;
                     case 3:
-                        Console.Clear();
                         InchConvert();
                         break;
                     case 4:
-                        Console.Clear();
                         MakeLine();
                         break;
                     case 5:
-                        Console.Clear();
                         SumEvens();
                         break;
                     case 6:
-                        Console.Clear();
                         Factorial();
                         break;
                     default:
@@ -128,6 +123,7 @@ namespace hw3
             } while (operation != 3);
             Console.ReadLine();
         }
+
         public static void MakeLine()
         {
             string symbol = "";
@@ -174,8 +170,8 @@ namespace hw3
             }
             Console.Clear();
             Console.WriteLine("The sum of evens in range from {0} to {1} = {2}", A, B, result);
+            Console.ReadLine();
         }
-
 
         public static void Factorial()
         {

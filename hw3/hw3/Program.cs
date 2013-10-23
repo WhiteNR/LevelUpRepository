@@ -95,7 +95,7 @@ namespace hw3
 
         public static void Numbers_v2()
         {
-            int sum = 0, orig_count = 0, unit = 0, count = 0,div = 0;;
+            int sum = 0, unit = 0, count = 0;
             double natural = 0;
             string number = "";
             Console.WriteLine("NUMBERS.");
@@ -104,29 +104,20 @@ namespace hw3
             {
                 number = Console.ReadLine();
                 natural = Double.Parse(number);
-                orig_count = number.Replace(",", "").Length;
-                count = orig_count;
+                count = number.Replace(",", "").Length;
             }
             catch
             {
                 Console.WriteLine("Error.");
                 return;
             }
-            unit = (int)natural;
-            div = (int)((natural - unit) * Math.Pow(10, count - unit.ToString().Length));
+            unit = (int)(natural * Math.Pow(10, count - ((int)natural).ToString().Length));
             while (unit != 0)
             {
                 sum += (unit % 10);
                 unit = unit / 10;
-                count--;
             }
-            while (div != 0)
-            {
-                sum += (div % 10);
-                div = div / 10;
-                count--;
-            }
-            Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, orig_count);
+            Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, count);
             Console.ReadLine();
         }
 

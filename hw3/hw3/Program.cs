@@ -10,16 +10,58 @@ namespace hw3
     {
         static void Main(string[] args)
         {
-            SumEvens();
+            int command = 0;
+            do
+            {
+                Console.WriteLine("1. PARITY CHECK.");
+                Console.WriteLine("2. NUMBERS.");
+                Console.WriteLine("3. INCH CONVERTER.");
+                Console.WriteLine("4. DRAW LINE.");
+                Console.WriteLine("5. SUM EVENS.");
+                Console.WriteLine("6. FACTORIAL");
+                Console.WriteLine("7. EXIT");
+                command = Int16.Parse(Console.ReadLine());
+                switch (command)
+                {
+                    case 1:
+                        Console.Clear();
+                        Even();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Numbers();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        InchConvert();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        MakeLine();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        SumEvens();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Factorial();
+                        break;
+                    default:
+                        command = 7;
+                        break;
+                }
+                Console.Clear();
+            } while (command != 7);
         }
 
         public static void Even()
         {
             int A;
-            Console.WriteLine("PARITY CHECK");
+            Console.WriteLine("PARITY CHECK.");
             Console.WriteLine("Please enter the number:");
             A = Int16.Parse(Console.ReadLine());
-            if (A%2 == 0)
+            if (A % 2 == 0)
             {
                 Console.WriteLine("Even.");
             }
@@ -27,13 +69,15 @@ namespace hw3
             {
                 Console.WriteLine("Odd.");
             }
+            Console.ReadLine();
         }
- 
+
         public static void Numbers()
         {
-            int sum = 0,count = 0;
+            int sum = 0, count = 0;
             double a = 0;
             string _numbers = "";
+            Console.WriteLine("NUMBERS.");
             Console.WriteLine("Please enter the number a < 100:");
             try
             {
@@ -44,13 +88,14 @@ namespace hw3
                 Console.WriteLine("Error.");
                 Numbers();
             }
-            _numbers = a.ToString().Replace(",","");
+            _numbers = a.ToString().Replace(",", "");
             for (int i = 0; i < _numbers.Length; i++)
             {
                 sum += Int32.Parse(_numbers[i].ToString());
                 count++;
             }
             Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, count);
+            Console.ReadLine();
         }
 
         public static void InchConvert()
@@ -59,7 +104,7 @@ namespace hw3
             int operation = 0;
             do
             {
-                Console.WriteLine("Inch Converter.");
+                Console.WriteLine("INCH CONVERTER.");
                 Console.WriteLine("1. Inch -> Centimeter.\n2. Centimeter -> Inch.\n3. Exit.");
                 operation = Int32.Parse(Console.ReadLine());
                 switch (operation)
@@ -75,19 +120,19 @@ namespace hw3
                         Console.Clear();
                         Console.WriteLine("Please enter number of centimeters:");
                         result = Int32.Parse(Console.ReadLine());
-                        Console.WriteLine("{0} centimeters = {1} inches", result, (result/2.54).ToString("#.##"));
+                        Console.WriteLine("{0} centimeters = {1} inches", result, (result / 2.54).ToString("#.##"));
                         Console.ReadLine();
                         break;
                 }
                 Console.Clear();
             } while (operation != 3);
-            
+            Console.ReadLine();
         }
         public static void MakeLine()
         {
             string symbol = "";
             int _length = 0, direction = 0;
-            Console.WriteLine("Draw line.");
+            Console.WriteLine("DRAW LINE.");
             Console.WriteLine("Please enter the length of line:");
             _length = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the symbol of line:");
@@ -107,12 +152,13 @@ namespace hw3
                 }
             }
             Console.WriteLine();
+            Console.ReadLine();
         }
 
         public static void SumEvens()
         {
             int A = 0, B = 0, result = 0, i = 0;
-            Console.WriteLine("Sum evens.");
+            Console.WriteLine("SUM EVENS.");
             Console.WriteLine("Please enter the first number of range:");
             A = Int16.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the last number of range:");
@@ -120,7 +166,7 @@ namespace hw3
             i = A;
             while (i != B)
             {
-                if (i%2 != 0)
+                if (i % 2 != 0)
                 {
                     result += i;
                 }
@@ -129,5 +175,21 @@ namespace hw3
             Console.Clear();
             Console.WriteLine("The sum of evens in range from {0} to {1} = {2}", A, B, result);
         }
+
+
+        public static void Factorial()
+        {
+            int num = 0, factorial = 1;
+            Console.WriteLine("Factorial.");
+            num = Int16.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= num; i++)
+            {
+                factorial *= i;
+            }
+            Console.WriteLine("Factorial = {0}", factorial);
+            Console.ReadLine();
+        }
     }
 }
+

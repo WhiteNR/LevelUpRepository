@@ -19,7 +19,8 @@ namespace hw3
                 Console.WriteLine("4. DRAW LINE.");
                 Console.WriteLine("5. SUM EVENS.");
                 Console.WriteLine("6. FACTORIAL");
-                Console.WriteLine("7. EXIT");
+                Console.WriteLine("7. FIGURES.");
+                Console.WriteLine("8. EXIT");
                 command = Int16.Parse(Console.ReadLine());
                 Console.Clear();
                 switch (command)
@@ -42,12 +43,15 @@ namespace hw3
                     case 6:
                         Factorial();
                         break;
+                    case 7:
+                        Figures.ShowFigures();
+                        break;
                     default:
-                        command = 7;
+                        command = 8;
                         break;
                 }
                 Console.Clear();
-            } while (command != 7);
+            } while (command != 8);
         }
 
         public static void Even()

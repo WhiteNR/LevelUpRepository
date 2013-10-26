@@ -75,7 +75,7 @@ namespace hw3
         {
             int sum = 0, count = 0;
             double a = 0;
-            string _numbers = "";
+            string numbers = "";
             Console.WriteLine("NUMBERS.");
             Console.WriteLine("Please enter the number a < 100:");
             try
@@ -87,10 +87,10 @@ namespace hw3
                 Console.WriteLine("Error.");
                 return;
             }
-            _numbers = a.ToString().Replace(",", "");
-            for (int i = 0; i < _numbers.Length; i++)
+            numbers = a.ToString().Replace(",", "");
+            for (int i = 0; i < numbers.Length; i++)
             {
-                sum += Int32.Parse(_numbers[i].ToString());
+                sum += Int32.Parse(numbers[i].ToString());
                 count++;
             }
             Console.WriteLine("Sum: {0}  Number of digits: {1}", sum, count);
@@ -192,7 +192,7 @@ namespace hw3
             Console.WriteLine("Please enter the last number of range:");
             B = Int16.Parse(Console.ReadLine());
             i = A;
-            while (i != B)
+            while (i <= B)
             {
                 if (i % 2 != 0)
                 {

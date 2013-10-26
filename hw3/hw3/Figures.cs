@@ -196,7 +196,7 @@ namespace hw3
             {
                 for (int j = 0; j < A1 - 1; j++)
                 {
-                    if ((int)A1 / 2 + i - 1 >= j && (int)A1 / 2 - i - 1 <= j)
+                    if (A1 / 2 + i - 1 >= j && A1 / 2 - i - 1 <= j)
                     {
                         Console.Write(C);
                     }
@@ -229,7 +229,7 @@ namespace hw3
             {
                 for (int j = 0; j < A1 - 1; j++)
                 {
-                    if ((int)A1 / 2 + i - 1 == j || (int)A1 / 2 - i - 1 == j)
+                    if (A1 / 2 + i - 1 == j || A1 / 2 - i - 1 == j)
                     {
                         Console.Write(C);
                     }

@@ -11,9 +11,9 @@ namespace hw4
     {
         static void Main(string[] args)
         {
+            int command = 0;
             HomeWork4 hw4 = new HomeWork4();
             MenuCls menu = new MenuCls();
-            int command = 0;
             do
             {
                 command = menu.ShowMenu(hw4);

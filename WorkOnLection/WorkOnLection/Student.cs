@@ -66,19 +66,10 @@ namespace WorkOnLection
 
         public double GetEverageMark(int a)
         {
-            int sum = 0, count = 0, everage = 0;
-            foreach (int mark in mas[a])
+            double everage = 0;
+            if (mas[a].Length > 0)
             {
-                 sum += mark;
-                 count++;
-            }
-            if (count != 0)
-            {
-                everage = 0;
-            }
-            else
-            {
-                everage = sum / count;
+                everage = mas[a].Average();
             }
             return everage;
         }
@@ -86,7 +77,7 @@ namespace WorkOnLection
         public string GetTotalStudentInfo()
         {
             string ret = "";
-            ret += "First Name: " + FirstName + " Last Name: " + LastName + " Father Name: " + FatherName + "\r\n";
+            ret += "First Name: " + FirstName + "\r\nLast Name: " + LastName + "\r\nFather Name: " + FatherName + "\r\n";
             for (int i = 0; i < mas.Length; i++)
             {
                 switch (i)
@@ -105,7 +96,10 @@ namespace WorkOnLection
                 {
                     ret += mas[i][j].ToString() + " ";
                 }
-                ret += "\r\n"
+
+                ret += "\r\nAverage mark:" + GetEverageMark(i).ToString() + "\r\n";
+
+                ret += "\r\n";
             }
             return ret;
         }

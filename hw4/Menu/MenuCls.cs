@@ -20,6 +20,7 @@ namespace Menu
             {
                 Console.WriteLine(item);
             }
+
             Console.WriteLine("0. EXIT");
             Console.WriteLine("\r\nPlease enter:");
 

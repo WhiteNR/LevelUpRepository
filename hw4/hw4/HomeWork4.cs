@@ -239,14 +239,7 @@ namespace hw4
 
             index = str.Length;
 
-            for (int i = str.Length - 1; i >= 0; i--)
-            {
-                if (str[i].ToString() == symb)
-                {
-                    index = i;
-                    break;
-                }
-            }
+            index = str.LastIndexOf(symb);
 
             str = str.Remove(index);
 

@@ -36,12 +36,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="Wonders\Beacon.cs" />
     <Compile Include="Wonders\ChinaWall.cs" />
     <Compile Include="Wonders\HangingGardens.cs" />
     <Compile Include="Wonders\Kolosus.cs" />
     <Compile Include="Wonders\Piramids.cs" />
     <Compile Include="Wonders\TadjMahal.cs" />
+    <Compile Include="Wonders\Wonder.cs" />
     <Compile Include="Wonders\ZeusStatue.cs" />
   </ItemGroup>
   <ItemGroup>

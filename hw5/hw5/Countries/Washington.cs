@@ -8,7 +8,7 @@ namespace Countries.USA
 {
     class Washington
     {
-        long population = 315000000;
+        long population = 632323;
 
         public long Population { get { return population; } }
     }

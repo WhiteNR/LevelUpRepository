@@ -10,15 +10,20 @@ namespace hw5
     {
         int a, b;
 
-        public void Parse(string str)
+        public Struct(int a, int b)
+        {
+            this.a = a;
+            this.b = b;
+        }
+
+        public static Struct Parse(string str)
         { 
             string[] strArr;
             char[] separator = {' ',','};
             strArr = str.Split(separator,2);
             if (strArr.Length == 2)
             {
-                a = Int32.Parse(strArr[0]);
-                b = Int32.Parse(strArr[1]);
+                return new Struct(Int32.Parse(strArr[0]), Int32.Parse(strArr[1]));
             }
             else
             {

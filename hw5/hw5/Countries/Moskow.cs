@@ -8,7 +8,7 @@ namespace Countries.Russia
 {
     class Moskow
     {
-        long population = 315000000;
+        long population = 11979529;
 
         public long Population { get { return population; } }
     }

@@ -8,7 +8,7 @@ namespace Countries.Ukraine
 {
     class Kyiv
     {
-        long population = 42000000;
+        long population = 2758000;
 
         public long Population { get { return population; } }
     }

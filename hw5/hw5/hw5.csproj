@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Complex.cs" />
     <Compile Include="Countries\Moskow.cs" />
+    <Compile Include="Fraction.cs" />
+    <Compile Include="LineEq.cs" />
     <Compile Include="Struct.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

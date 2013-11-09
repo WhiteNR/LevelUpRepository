@@ -23,8 +23,16 @@ namespace Menu
 
             Console.WriteLine("0. EXIT");
             Console.WriteLine("\r\nPlease enter:");
-
-            command = Int16.Parse(Console.ReadLine());
+            try
+            {
+                command = Int16.Parse(Console.ReadLine());
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Enter valid menu number!");
+                Console.ReadLine();
+                command = -1;
+            }
             Console.Clear();
 
             myHW.Start(command);

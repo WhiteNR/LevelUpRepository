@@ -236,7 +236,6 @@ namespace hw4
             str = Console.ReadLine();
             Console.WriteLine("Please enter 1 symbol:");
             symb = Console.ReadLine();
-
             index = str.Length;
 
             index = str.LastIndexOf(symb);

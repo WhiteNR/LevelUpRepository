@@ -10,13 +10,11 @@ namespace WorkOnLection
     {
         static void Main(string[] args)
         {
-
             Student student = new Student("ololo", "ololoev","ololoevich");
             student.AddAdministratingMark(5);
             student.AddAdministratingMark(4);
             Console.WriteLine(student.GetTotalStudentInfo());
-            
-
+            Console.ReadLine();
             //int[][] mas = new int[4][];
             //mas[0] = new int[8];
             //mas[1] = new int[4];

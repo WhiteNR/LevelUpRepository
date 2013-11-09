@@ -13,9 +13,7 @@ namespace hw5
     {
         static void Main(string[] args)
         {
-            string str1, str2,ret;
-            //2
-            Struct strct = new Struct();
+            string str1, str2;
 
             //3
             Console.WriteLine("Please Enter A1,B1:");

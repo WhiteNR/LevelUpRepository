@@ -13,7 +13,7 @@ namespace hw5
     {
         static void Main(string[] args)
         {
-            string str1, str2;
+            string str1, str2,ret;
             //2
             Struct strct = new Struct();
 
@@ -23,16 +23,20 @@ namespace hw5
             Console.WriteLine("Please Enter A2 B2:");
             str2 = Console.ReadLine();
 
+            //Console.WriteLine(coefforline.lineequation(3, -2, 1, 3, 4, 5));
+
             try
             {
                 Struct struct1 = Struct.Parse(str1);
                 Struct struct2 = Struct.Parse(str2);
-                LineEq.CountLineEq(struct1, struct2, 5, 5);
+                Console.WriteLine(LineEq.CountLineEq(struct1, struct2, 4, 5));
+                Console.ReadLine();
             }
             catch (FormatException e)
             {
                 Console.WriteLine(e.Message);
             }
+            
            
 
             //4

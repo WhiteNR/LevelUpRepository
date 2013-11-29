@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="hw7.AbstractClasses.Figure" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQEAIAAAAAAAAAAAgAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>AbstractClasses\Figure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Circle" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Classes\Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Diamond" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Diamond.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Ellipse" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>Classes\Ellipse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Parallelogram" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Parallelogram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Rectangle" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.SimpleFigure" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABQAAAAQAAAAAAAAAAAAAAAAEAEAAAQAAAAA=</HashCode>
+      <FileName>Classes\SimpleFigure.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="hw7.Classes.SimpleFigures" Collapsed="true">
+    <Position X="18.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAI=</HashCode>
+      <FileName>Classes\SimpleFigures.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Square" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Square.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Trapezoid" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Trapezoid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Classes.Triangle" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Triangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Exceptions.NotTriengleException" Collapsed="true">
+    <Position X="26.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\NotTriengle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Exceptions.WrongTriengleException" Collapsed="true">
+    <Position X="22.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\WrongTriengleException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hw7.Program" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ApplicationException" Collapsed="true">
+    <Position X="24.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Struct Name="hw7.Point" Collapsed="true">
+    <Position X="18.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Structure\Point.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="hw7.Interface.ISimpleFugure" Collapsed="true">
+    <Position X="18.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABQAAAAQAAAAAAAAAAAAAAAAEAEAAAQAAAAA=</HashCode>
+      <FileName>Interface\ISimpleFugure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

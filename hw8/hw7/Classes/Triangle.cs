@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using hw7.AbstractClasses;
+using hw7.Exceptions;
 
 namespace hw7.Classes
 {
@@ -18,12 +19,16 @@ namespace hw7.Classes
 
                     PointsList.AddRange(pointsList);
                     SideSizesList = GetSideSizes(PointsList);
+                    if ( SideSizesList[2] >= SideSizesList[0] + SideSizesList[1]  || SideSizesList[1] >= SideSizesList[0] + SideSizesList[2] || SideSizesList[0] >= SideSizesList[2] + SideSizesList[1])
+                    {
+                        throw new WrongTriengleException("It's not the triangle");
+                    }
                     Perimeter = SideSizesList.Sum();
                     Area = GetPolygonArea(PointsList);
                 }
                 else
                 {
-                    throw new Exception("It's not the triangle");
+                    throw new NotTriengleException("It's not the triangle");
                 }
             }
         }

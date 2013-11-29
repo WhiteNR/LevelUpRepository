@@ -47,16 +47,23 @@
     <Compile Include="Classes\Ellipse.cs" />
     <Compile Include="Classes\Parallelogram.cs" />
     <Compile Include="Classes\Rectangle.cs" />
+    <Compile Include="Classes\SimpleFigure.cs" />
+    <Compile Include="Classes\SimpleFigures.cs" />
     <Compile Include="Classes\Square.cs" />
     <Compile Include="Classes\Trapezoid.cs" />
     <Compile Include="Classes\Triangle.cs" />
+    <Compile Include="Exceptions\WrongTriengleException.cs" />
+    <Compile Include="Exceptions\NotTriengle.cs" />
+    <Compile Include="Interface\ISimpleFugure.cs" />
     <Compile Include="Structure\Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

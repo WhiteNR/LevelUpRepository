@@ -15,7 +15,7 @@ namespace hw7.AbstractClasses
             Area = 0;
         }
 
-        protected List<double> GetSideSizes(List<Point> _pointsList)
+        protected virtual List<double> GetSideSizes(List<Point> _pointsList)
         {
             List<double> sideSizeList = new List<double>();
             Point p1, p2;
@@ -38,7 +38,7 @@ namespace hw7.AbstractClasses
             return sideSizeList;
         }
 
-        protected double GetPolygonArea(List<Point> pointsList)
+        protected virtual double GetPolygonArea(List<Point> pointsList)
         {
             double halfPerimeter, tempArea = 0;
             Point p1, p2, p3;
@@ -63,7 +63,7 @@ namespace hw7.AbstractClasses
             return tempArea;
         }
 
-        private double LineLength(Point p1, Point p2)
+        protected virtual double LineLength(Point p1, Point p2)
         {
             return Math.Sqrt(Math.Pow(p2.X - p1.X, 2) + Math.Pow(p2.Y - p1.Y, 2));
         }

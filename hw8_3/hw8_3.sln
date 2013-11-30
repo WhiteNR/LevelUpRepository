@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hw8_3", "hw8_3\hw8_3.csproj", "{237DAED1-38DB-4DBC-8AE0-53D070C73627}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{237DAED1-38DB-4DBC-8AE0-53D070C73627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237DAED1-38DB-4DBC-8AE0-53D070C73627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237DAED1-38DB-4DBC-8AE0-53D070C73627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237DAED1-38DB-4DBC-8AE0-53D070C73627}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

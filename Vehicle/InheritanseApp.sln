@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApp", "InheritanseApp\VehicleApp.csproj", "{7AD17E7F-A2F1-42C9-B494-F8B6D96ED5C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "Vehicle\Vehicle.csproj", "{5292D7DC-87CF-4629-A968-A8E50BE37829}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AD17E7F-A2F1-42C9-B494-F8B6D96ED5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD17E7F-A2F1-42C9-B494-F8B6D96ED5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD17E7F-A2F1-42C9-B494-F8B6D96ED5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD17E7F-A2F1-42C9-B494-F8B6D96ED5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5292D7DC-87CF-4629-A968-A8E50BE37829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5292D7DC-87CF-4629-A968-A8E50BE37829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5292D7DC-87CF-4629-A968-A8E50BE37829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5292D7DC-87CF-4629-A968-A8E50BE37829}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -36,9 +36,7 @@ namespace p2.Classes
 
         public override object DeepCopy()
         {
-            Student student = new Student();
-            student.Person = (Person)this;
-            student._education = this._education;
+            Student student = new Student((Person)this, this._education, this._groupNumber);
             foreach (var item in _exams)
             {
                 student._exams.Add(((Person.Exam)item).DeepCopy());
@@ -46,10 +44,8 @@ namespace p2.Classes
 
             foreach (var item in _tests)
             {
-                student._exams.Add(((Test)item).DeepCopy());
+                student._tests.Add(((Test)item).DeepCopy());
             }
-
-            student._groupNumber = this._groupNumber;
             return student;
         }
 
@@ -66,7 +62,12 @@ namespace p2.Classes
             Exams.AddRange(exams);
         }
 
-        public override string ToString()
+        public void AddTests(params Test[] tests)
+        {
+            _tests.AddRange(tests);
+        }
+
+        public new string ToString()
         {
             string ret = base.ToString() + "\r\n" + "Education Type: " + _education.ToString() + "\r\n" + "GroupNumber: " + _groupNumber.ToString() + "\r\n" + "Exams:\r\n";
 
@@ -75,7 +76,7 @@ namespace p2.Classes
                 ret += item.ToString() + "\r\n";
             }
             ret += "Tests:\r\n";
-            foreach (Person.Exam item in _tests)
+            foreach (Test item in _tests)
             {
                 ret += item.ToString() + "\r\n";
             }
@@ -110,7 +111,7 @@ namespace p2.Classes
         {
             get
             {
-                return (Person)this;
+                return this;
             }
             set 
             { 
@@ -124,6 +125,7 @@ namespace p2.Classes
 
         public Person.Education StudentEducation { get { return _education; } set { _education = value; } }
         public ArrayList Exams { get { return _exams; } set { _exams = value; } }
+        public ArrayList Tests { get { return _tests; } set { _tests = value; } }
         public int GroupNumber 
         {
             get 
@@ -154,28 +156,45 @@ namespace p2.Classes
             {
                 if (item.ExamMark > mark)
                 {
-                    yield return item;
+                    yield return item.ExamName;
                 }
             }
         }
 
-        public IEnumerator GetEnumerator()
+        public IEnumerable IteratorPassed()
         {
-            foreach (var item in _exams)
+            foreach (Exam item in _exams)
             {
-                yield return item;
+                if (item.ExamMark > 2)
+                {
+                    yield return item.ExamName;
+                }
             }
 
-            foreach (var item in _tests)
+            foreach (Test item in _tests)
             {
-                yield return item;
+                if (item.IsPassed == true)
+                {
+                    yield return item.SubjectName;
+                }
+            }
+        }
+
+        public IEnumerable IteratorPassedTests()
+        {
+            foreach (Test itemTest in _tests)
+            {
+                foreach (string itemExam in Iterator(2))
+                {
+                    if (itemTest.SubjectName == itemExam)
+                    {
+                        yield return itemTest.SubjectName;
+                    }
+                }
+               
             }
         }
     }
 }
 
-/*
-В новой версии класса Student так же определить
-•	итератор для последовательного перебора всех элементов (объектов типа object) из списков зачетов и экзаменов (объединение); 
-•	итератор c параметром для перебора экзаменов (объектов типа Exam)  с оценкой больше заданного значения. 
- */
+

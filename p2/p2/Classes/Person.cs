@@ -110,7 +110,7 @@ namespace p2.Classes
             return this._firstName.GetHashCode() ^ this._lastName.GetHashCode() ^ this._dob.GetHashCode();
         }
 
-        public override string ToString()
+        public new string ToString()
         {
             return "First name: " + _firstName + "\r\nLast name: " + _lastName + "\r\nDOB: " + _dob;
         }
@@ -138,10 +138,7 @@ namespace p2.Classes
 
             public object DeepCopy()
             {
-                Exam exam = new Exam();
-                exam.ExamDateTime = this.ExamDateTime;
-                exam.ExamMark = this.ExamMark;
-                exam.ExamName = this.ExamName;
+                Exam exam = new Exam(this.ExamName,this.ExamMark,this.ExamDateTime);
                 return exam;
             }
 

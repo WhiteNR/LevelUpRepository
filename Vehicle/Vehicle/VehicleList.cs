@@ -11,8 +11,11 @@ namespace Vehicle
     {
         List<Vehicle> vehicles = new List<Vehicle>();
 
+        TrafficLight _trafficLight;
+
         public VehicleList()
         {
+            _trafficLight = new TrafficLight(StopVehicles);
             vehicles.Add(new Avto(100, "Mersedes", 300, 120, 30));
             vehicles.Add(new Avto(1500, "BMW",250,120,20));
             vehicles.Add(new Moto(150,180,130,20));
@@ -32,53 +35,80 @@ namespace Vehicle
 
         public void IncreaseVehiclesSpeed()
         {
-            foreach (IVehicle item in vehicles)
+            if (!_trafficLight.TrafficLightWork())
             {
-                try
+                foreach (IVehicle item in vehicles)
                 {
-                    item.IncreaseSpeed();
+                    try
+                    {
+                        item.IncreaseSpeed();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine();
+                        Console.Write(e.Message);
+                    }
+                    Console.WriteLine(item.ToString());
                     Console.WriteLine();
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine();
-                    Console.Write(e.Message);
-                }
-                Console.WriteLine(item.ToString());
             }
         }
 
         public void DecreaseVehiclesSpeed()
         {
-            foreach (IVehicle item in vehicles)
+            if (!_trafficLight.TrafficLightWork())
             {
-                try
+                foreach (IVehicle item in vehicles)
                 {
-                    item.DecreaseSpeed();
+                    try
+                    {
+                        item.DecreaseSpeed();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Write(e.Message);
+                    }
+                    Console.WriteLine(item.ToString());
                     Console.WriteLine();
                 }
-                catch (Exception e)
-                {
-                    Console.Write(e.Message);
-                }
-                Console.WriteLine(item.ToString());
             }
         }
 
         public void KeepVehiclesCurrentSpeed()
         {
+            if (!_trafficLight.TrafficLightWork())
+            {
+                foreach (IVehicle item in vehicles)
+                {
+                    try
+                    {
+                        item.KeepCurrentSpeed();
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Write(e.Message);
+                    }
+                    Console.WriteLine(item.ToString());
+                    Console.WriteLine();
+                }
+            }
+        }
+
+        public void StopVehicles()
+        {
             foreach (IVehicle item in vehicles)
             {
                 try
                 {
-                    item.KeepCurrentSpeed();
-                    Console.WriteLine();
+                    item.Stop();
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine();
                     Console.Write(e.Message);
                 }
                 Console.WriteLine(item.ToString());
+                Console.WriteLine();
             }
         }
     }

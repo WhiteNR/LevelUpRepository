@@ -12,7 +12,7 @@ namespace Vehicle
         private Engine _engine;
         private int _power;
         private int _maxSpeed;
-        private int _currentSpeed;
+        protected int _currentSpeed;
 
         public Vehicle()
         {
@@ -49,6 +49,7 @@ namespace Vehicle
 
         public virtual void Stop()
         {
+            _currentSpeed = 0;
             Console.WriteLine("Base stop");
         }
 

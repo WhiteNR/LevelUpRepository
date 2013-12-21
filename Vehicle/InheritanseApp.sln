@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "Vehicle\Vehicle.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{D6694B60-1C27-4B53-8969-ABBE45ECE84D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleTest", "VehicleTest\VehicleTest.csproj", "{8B949F1B-BE60-40B1-B51B-DEE4BDBE5165}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6D05ECA2-2E68-47E0-9E45-0D0F02AD362F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{D6694B60-1C27-4B53-8969-ABBE45ECE84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6694B60-1C27-4B53-8969-ABBE45ECE84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6694B60-1C27-4B53-8969-ABBE45ECE84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B949F1B-BE60-40B1-B51B-DEE4BDBE5165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B949F1B-BE60-40B1-B51B-DEE4BDBE5165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B949F1B-BE60-40B1-B51B-DEE4BDBE5165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B949F1B-BE60-40B1-B51B-DEE4BDBE5165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

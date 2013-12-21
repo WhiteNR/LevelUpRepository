@@ -10,7 +10,11 @@ namespace Vehicle
     {
         public TrolleyBus():base()
         {
-            MaxSpeed = 47;
+        }
+
+        public TrolleyBus(float weight, int maxSpeed, int maxTemperature, int power)
+            : base(weight: weight, maxSpeed: maxSpeed, maxTemperature: maxTemperature, power: power)
+        {
         }
 
         public bool HasElectrisity
@@ -27,6 +31,11 @@ namespace Vehicle
         public override void Stop()
         {
             Console.WriteLine("TrolleyBus stop");
+        }
+
+        public override string ToString()
+        {
+            return "Trolley Bus speed: " + CurrentSpeed + "\r\n" + Engine.ToString();
         }
     }
 }

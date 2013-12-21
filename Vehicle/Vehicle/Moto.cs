@@ -10,8 +10,15 @@ namespace Vehicle
     {
         public Moto():base()
         {
-            MaxSpeed = 140;
+            HasGasoline = true;
         }
+
+        public Moto(float weight, int maxSpeed, int maxTemperature, int power)
+            : base(weight: weight, maxSpeed: maxSpeed, maxTemperature: maxTemperature, power: power)
+        {
+            HasGasoline = true;
+        }
+
 
         public override void Drive()
         {
@@ -28,6 +35,11 @@ namespace Vehicle
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return "Moto speed: " + CurrentSpeed + "\r\n" + Engine.ToString();
         }
     }
 }

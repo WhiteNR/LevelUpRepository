@@ -16,8 +16,6 @@ namespace Vehicle
 
         void DecreaseSpeed();
 
-        int Speed { get; set; }
-        int Temperature { get; set; }
-        bool IsBroken { get; set; }
+        void KeepCurrentSpeed();
     }
 }

@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Menu\Menu.csproj">
+      <Project>{d6694b60-1c27-4b53-8969-abbe45ece84d}</Project>
+      <Name>Menu</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vehicle\Vehicle.csproj">
       <Project>{5292d7dc-87cf-4629-a968-a8e50be37829}</Project>
       <Name>Vehicle</Name>

@@ -2,30 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
 
 namespace Vehicle
 {
-    public abstract class Vehicle: IVehicle
+    public abstract class Vehicle : IVehicle
     {
-        private readonly float weight;
+        private readonly float _weight;
+        private Engine _engine;
+        private int _power;
+        private int _maxSpeed;
+        private int _currentSpeed;
 
         public Vehicle()
         {
-            MaxSpeed = 30;
-            IsBroken = false;
-            Temperature = 80;
-            Speed = 0;
+            _engine = new Engine();
+            _weight = 0;
+            _power = 10;
+            _maxSpeed = 100;
+            _currentSpeed = 0;
         }
 
-        public Vehicle(float weight):this()
+        public Vehicle(float weight, int maxSpeed, int maxTemperature, int power)
         {
-            this.weight = weight;
+            _engine = new Engine(maxTemperature);
+            _maxSpeed = maxSpeed;
+            _weight = weight;
+            _power = power;
+            _currentSpeed = 0;
+        }
+
+        public Engine Engine
+        {
+            get { return _engine; }
         }
 
         public float Weight
         {
-            get { return weight; }
+            get { return _weight; }
         }
 
         public virtual void Drive()
@@ -38,47 +52,42 @@ namespace Vehicle
             Console.WriteLine("Base stop");
         }
 
-        public void IncreaseSpeed()
+        public virtual void IncreaseSpeed()
         {
-            if (Temperature < 120 && !IsBroken)
+            try
             {
-                if (Speed + 10 < MaxSpeed)
-                {
-                    Speed += 10;
-                }
-                else if (Speed == MaxSpeed)
-                {
-                    Temperature += 5;
-                    throw new Exception("Max speed is reached. Engine temperature is:" + Temperature.ToString() + " (vehicle blow up on 120) ");
-                }
-                else
-                {
-                    Speed = MaxSpeed;
-                }
+                _engine.TryIncreaseSpeed(_maxSpeed, ref _currentSpeed, _power);
             }
-            else
-            { 
-                IsBroken = true;
-                Speed = 0;
-                throw new Exception("Vehicle blowed up!!!! ");
+            catch (Exception e)
+            {
+                throw e;
             }
         }
 
-        public void DecreaseSpeed()
+        public virtual void DecreaseSpeed()
         {
-            if (Speed - 10 > 0)
+            try
             {
-                Speed -= 10;
+                _engine.TryDecreaseSpeed(_maxSpeed, ref _currentSpeed, _power);
             }
-            else
+            catch (Exception e)
             {
-                Speed = 0;
+                throw e;
             }
         }
 
-        public int MaxSpeed { get; protected set; }
-        public int Speed { get; set; }
-        public int Temperature { get; set; }
-        public bool IsBroken { get; set; }
+        public virtual void KeepCurrentSpeed()
+        {
+            try
+            {
+                _engine.TryKeepCurrentSpeed();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public int CurrentSpeed { get { return _currentSpeed; } }
     }
 }

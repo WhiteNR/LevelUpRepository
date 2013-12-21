@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Vehicle 
 {
-    public class Avto: Vehicle,IGasolineVehicle
+    public class Avto: Vehicle, IGasolineVehicle
     {
         protected string manufactureName;
 
         public Avto():base()
         {
-            MaxSpeed = 160;
         }
 
-        public Avto(float weight): base(weight: weight)
+        public Avto(float weight, int maxSpeed, int maxTemperature, int power)
+            : base(weight: weight, maxSpeed: maxSpeed, maxTemperature: maxTemperature, power: power)
         {
-            MaxSpeed = 160;
         }
 
-        public Avto(float weight, string manufactureName):this(weight: weight)
+        public Avto(float weight, string manufactureName, int maxSpeed, int maxTemperature, int power)
+            : this(weight: weight, maxSpeed: maxSpeed, maxTemperature: maxTemperature, power: power)
         {
             this.manufactureName = manufactureName;
         }
@@ -29,7 +29,6 @@ namespace Vehicle
         {
             Console.WriteLine("Avto is running");
         }
-
 
         public override void Stop()
         {
@@ -40,6 +39,11 @@ namespace Vehicle
         {
             get;
             set;
+        }
+
+        public override string ToString()
+        {
+            return "Auto speed: " + CurrentSpeed + "\r\n" + Engine.ToString();
         }
     }
 }

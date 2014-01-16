@@ -29,12 +29,6 @@ namespace Vehicle
             Console.WriteLine("Truck is running");
         }
 
-        public override void Stop()
-        {
-            _currentSpeed = 0;
-            Console.WriteLine("Truck stopped");
-        }
-
         public float OverWeight { get; set; }
 
         public bool HasGasoline

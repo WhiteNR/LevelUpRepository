@@ -28,12 +28,6 @@ namespace Vehicle
             Console.WriteLine("TrolleyBus drive");
         }
 
-        public override void Stop()
-        {
-            _currentSpeed = 0;
-            Console.WriteLine("TrolleyBus stop");
-        }
-
         public override string ToString()
         {
             return "Trolley Bus speed: " + CurrentSpeed + "\r\n" + Engine.ToString();

@@ -23,12 +23,6 @@ namespace Vehicle
             Console.WriteLine("Bus is running");
         }
 
-        public override void Stop()
-        {
-            _currentSpeed = 0;
-            Console.WriteLine("Bus was stopped");
-        }
-
         public bool HasGasoline
         {
             get;

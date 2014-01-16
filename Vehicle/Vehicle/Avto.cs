@@ -30,12 +30,6 @@ namespace Vehicle
             Console.WriteLine("Avto is running");
         }
 
-        public override void Stop()
-        {
-            _currentSpeed = 0;
-            Console.WriteLine("Avto was stopped.");
-        }
-
         public bool HasGasoline
         {
             get;

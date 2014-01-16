@@ -25,13 +25,6 @@ namespace Vehicle
             Console.WriteLine("Moto is running");
         }
 
-
-        public override void Stop()
-        {
-            _currentSpeed = 0;
-            Console.WriteLine("Moto was stopped.");
-        }
-
         public bool HasGasoline
         {
             get;

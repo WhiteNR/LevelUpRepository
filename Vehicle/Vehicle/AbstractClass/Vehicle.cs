@@ -49,8 +49,14 @@ namespace Vehicle
 
         public virtual void Stop()
         {
-            _currentSpeed = 0;
-            Console.WriteLine("Base stop");
+            try
+            {
+                _engine.TryStop(ref _currentSpeed);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
         public virtual void IncreaseSpeed()
@@ -82,6 +88,18 @@ namespace Vehicle
             try
             {
                 _engine.TryKeepCurrentSpeed();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public virtual void Breake()
+        {
+            try
+            {
+                _engine.TryBreake(ref _currentSpeed);
             }
             catch (Exception e)
             {

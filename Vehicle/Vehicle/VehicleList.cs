@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Vehicle
 {
@@ -13,8 +14,14 @@ namespace Vehicle
 
         TrafficLight _trafficLight;
 
+        Timer _timer = new Timer(1000);
+
+        Random _randomOperation = new Random();
+
         public VehicleList()
         {
+            
+            _timer.Elapsed += new ElapsedEventHandler(Driving);
             _trafficLight = new TrafficLight(StopVehicles);
             vehicles.Add(new Avto(100, "Mersedes", 300, 120, 30));
             vehicles.Add(new Avto(1500, "BMW",250,120,20));
@@ -33,10 +40,36 @@ namespace Vehicle
             }
         }
 
+        public void StartDriving()
+        {
+            _timer.Enabled = true;
+        }
+
+        private void Driving(object source, ElapsedEventArgs e)
+        {
+            Console.Clear();
+            switch (_randomOperation.Next(1, 3))
+            {
+                case 1:
+                    IncreaseVehiclesSpeed();
+                     break;
+                case 2:
+                     DecreaseVehiclesSpeed();
+                     break;
+                case 3:
+                     KeepVehiclesCurrentSpeed();
+                     break;
+                default:
+                    break;
+            }   
+        }
+
         public void IncreaseVehiclesSpeed()
         {
             if (!_trafficLight.TrafficLightWork())
             {
+                Console.WriteLine(_trafficLight.Lights.ToString());
+                Console.WriteLine();
                 foreach (IVehicle item in vehicles)
                 {
                     try
@@ -58,6 +91,8 @@ namespace Vehicle
         {
             if (!_trafficLight.TrafficLightWork())
             {
+                Console.WriteLine(_trafficLight.Lights.ToString());
+                Console.WriteLine();
                 foreach (IVehicle item in vehicles)
                 {
                     try
@@ -78,6 +113,8 @@ namespace Vehicle
         {
             if (!_trafficLight.TrafficLightWork())
             {
+                Console.WriteLine(_trafficLight.Lights.ToString());
+                Console.WriteLine();
                 foreach (IVehicle item in vehicles)
                 {
                     try
@@ -96,11 +133,20 @@ namespace Vehicle
 
         public void StopVehicles()
         {
+            Console.WriteLine(_trafficLight.Lights.ToString());
+            Console.WriteLine();
             foreach (IVehicle item in vehicles)
             {
                 try
                 {
-                    item.Stop();
+                    if (_trafficLight.Lights == TrafficLight.TrafficLights.Yellow)
+                    {
+                        item.Breake();
+                    }
+                    else if (_trafficLight.Lights == TrafficLight.TrafficLights.Red)
+                    {
+                        item.Stop();
+                    }
                 }
                 catch (Exception e)
                 {

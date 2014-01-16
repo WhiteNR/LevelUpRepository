@@ -17,5 +17,7 @@ namespace Vehicle
         void DecreaseSpeed();
 
         void KeepCurrentSpeed();
+
+        void Breake();
     }
 }

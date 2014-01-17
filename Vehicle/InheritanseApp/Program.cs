@@ -18,7 +18,8 @@ namespace VehicleApp
         private static void VehicleSample()
         {
             VehicleList vehicles = new VehicleList();
-
+            SingleVehicle singleVehicle;
+            MenuCls commonMenuCls, chooseVehicleMenuCls;
             foreach (IVehicle item in vehicles)
             {
                 item.Stop();
@@ -27,14 +28,20 @@ namespace VehicleApp
             Console.ReadLine();
             Console.Clear();
 
-            List<MenuItem> menuItems = new List<MenuItem>();
+            List<MenuItem> chooseVehicleMenuItems = new List<MenuItem>();
+            chooseVehicleMenuItems.Add(new MenuItem(1, "Auto.", new CommonDel(() => { singleVehicle = new SingleVehicle(new Avto()); singleVehicle.ShowMenu(); })));
+            chooseVehicleMenuItems.Add(new MenuItem(2, "Bus.", new CommonDel(() => { singleVehicle = new SingleVehicle(new Bus()); singleVehicle.ShowMenu(); })));
+            chooseVehicleMenuItems.Add(new MenuItem(3, "Moto.", new CommonDel(() => { singleVehicle = new SingleVehicle(new Moto()); singleVehicle.ShowMenu(); })));
+            chooseVehicleMenuItems.Add(new MenuItem(4, "TrolleyBus.", new CommonDel(() => { singleVehicle = new SingleVehicle(new TrolleyBus()); singleVehicle.ShowMenu(); })));
+            chooseVehicleMenuItems.Add(new MenuItem(5, "Truck.", new CommonDel(() => { singleVehicle = new SingleVehicle(new Truck()); singleVehicle.ShowMenu(); })));
+            chooseVehicleMenuCls = new MenuCls("Choose Vehicle", chooseVehicleMenuItems);
 
-            menuItems.Add(new MenuItem(1, "Start.", new CommonDel(vehicles.StartDriving)));
-            menuItems.Add(new MenuItem(2, "Keep current speed.", new CommonDel(vehicles.KeepVehiclesCurrentSpeed)));
-            menuItems.Add(new MenuItem(3, "Decrease speed.", new CommonDel(vehicles.DecreaseVehiclesSpeed)));
+            List<MenuItem> commonMenuItems = new List<MenuItem>();
+            commonMenuItems.Add(new MenuItem(1, "Start AutoDrive.", new CommonDel(vehicles.StartDriving)));
+            commonMenuItems.Add(new MenuItem(2, "Drive single vehicle.", new CommonDel(chooseVehicleMenuCls.ShowMenu)));
+            commonMenuCls = new MenuCls("Vehicle Menu", commonMenuItems);
 
-            MenuCls menuCls = new MenuCls("Vehicle Menu", menuItems);
-            menuCls.ShowMenu();
+            commonMenuCls.ShowMenu();
         }
     }
 }

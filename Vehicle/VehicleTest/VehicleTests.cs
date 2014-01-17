@@ -13,9 +13,9 @@ namespace VehicleTest
     public class ExampleTestOfNUnit
     {
         [Test]
-        public void TestMultiplication()
+        public void IncreaseSpeedTest()
         {
-            Assert.AreEqual(4, 1 * 2, "Умножение");
+            
         }
     }
 }

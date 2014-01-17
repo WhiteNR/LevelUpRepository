@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northind", "Northind\Northind.csproj", "{DE9A4F7B-FC07-4E04-AE71-73563AF91BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "Northwind.Entities\Northwind.Entities.csproj", "{363CCCEA-5ECE-488B-888E-3CE4E60942CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DataSource", "Northwind.DataSource\Northwind.DataSource.csproj", "{D02B6C24-2ABF-4241-BE83-9F01742BFD60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entegration.Tests", "Northwind.Entegration.Tests\Northwind.Entegration.Tests.csproj", "{53BA2303-C6EF-4775-92BA-3EC8D26A45B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE9A4F7B-FC07-4E04-AE71-73563AF91BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9A4F7B-FC07-4E04-AE71-73563AF91BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9A4F7B-FC07-4E04-AE71-73563AF91BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9A4F7B-FC07-4E04-AE71-73563AF91BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{363CCCEA-5ECE-488B-888E-3CE4E60942CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363CCCEA-5ECE-488B-888E-3CE4E60942CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363CCCEA-5ECE-488B-888E-3CE4E60942CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363CCCEA-5ECE-488B-888E-3CE4E60942CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02B6C24-2ABF-4241-BE83-9F01742BFD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02B6C24-2ABF-4241-BE83-9F01742BFD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02B6C24-2ABF-4241-BE83-9F01742BFD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02B6C24-2ABF-4241-BE83-9F01742BFD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53BA2303-C6EF-4775-92BA-3EC8D26A45B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BA2303-C6EF-4775-92BA-3EC8D26A45B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BA2303-C6EF-4775-92BA-3EC8D26A45B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BA2303-C6EF-4775-92BA-3EC8D26A45B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

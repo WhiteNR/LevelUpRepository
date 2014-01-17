@@ -20,7 +20,6 @@ namespace Vehicle
 
         public VehicleList()
         {
-            
             _timer.Elapsed += new ElapsedEventHandler(Driving);
             _trafficLight = new TrafficLight(StopVehicles);
             vehicles.Add(new Avto(100, "Mersedes", 300, 120, 30));
